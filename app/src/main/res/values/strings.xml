@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">composeboschyd</string>
+    <string name="name">Abdul</string>
+    <string name="greeting">Happy Birthday %1$s!</string>
+</resources>

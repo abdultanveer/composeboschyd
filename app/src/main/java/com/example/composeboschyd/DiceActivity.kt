@@ -74,14 +74,19 @@ fun DiceWithButtonAndImage(modifier: Modifier = Modifier) {
             result = (1..6).random()
             var c = 5 + 7
             sum(10,20)
-            throw NullPointerException()
+           // throw NullPointerException()
         }) {
             Text(text = stringResource(id = R.string.roll))
         }
     }
 }
 
-fun sum(a:Int,b:Int):Int{
-    var d = 10+15
+fun sum(a:Int,b:Int):Int {
+    var d = 5
+    repeat(5) {
+         d = 10 + 15
+        d += 10
+    }
+
     return a+b
 }

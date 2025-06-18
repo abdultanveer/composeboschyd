@@ -13,15 +13,22 @@
         android:theme="@style/Theme.Composeboschyd"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity"
+            android:name=".DiceActivity"
             android:exported="true"
-            android:label="@string/app_name"
+            android:label="@string/title_activity_dice"
             android:theme="@style/Theme.Composeboschyd">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.Composeboschyd">
+
         </activity>
     </application>
 

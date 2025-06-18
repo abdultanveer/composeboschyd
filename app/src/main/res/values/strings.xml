@@ -2,4 +2,7 @@
     <string name="app_name">composeboschyd</string>
     <string name="name">Abdul</string>
     <string name="greeting">Happy Birthday %1$s!</string>
+    <string name="title_activity_dice">DiceActivity</string>
+    <string name="roll">Roll</string>
+
 </resources>

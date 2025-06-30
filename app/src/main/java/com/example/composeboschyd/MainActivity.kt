@@ -1,5 +1,6 @@
 package com.example.composeboschyd
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import androidx.activity.ComponentActivity
@@ -11,12 +12,14 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
+import androidx.compose.material3.Button
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.painter.Painter
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
@@ -78,6 +81,8 @@ class MainActivity : ComponentActivity() {
 //this functiono is returning a textview
 @Composable
 fun Greeting(name: String,from: String, modifier: Modifier = Modifier) {
+    val context = LocalContext.current
+
     Column ( verticalArrangement = Arrangement.Center,
         modifier = modifier.padding(8.dp)){
         Text(
@@ -92,6 +97,14 @@ fun Greeting(name: String,from: String, modifier: Modifier = Modifier) {
             modifier = Modifier
                 .padding(16.dp)
                 .align(alignment = Alignment.End))
+        Button(
+            onClick = {
+
+                var intent = Intent("ineed.calendar.bosch.hyd")
+                context.startActivity(intent)
+            }) {
+            Text(text = "open calendar")
+        }
 
     }
 }
